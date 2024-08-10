@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script type="text/javascript">
+    function validate()
+    {
+var x=document.f1.txtpwd.value;
+var y=document.f1.txtcnfrmpwd.value;
+var z=document.f1.txtmobno.value;
+var a=document.f1.txtaadharno.value;
+if(x.length<=6 || y.length<=6)
+{
+  document.getElementById("bb").innerHTML="<font color=red>Size of Password should more than 6 Characters";
+return false;
+}
+       if(z.length!=10)
+      {
+document.getElementById("cc").innerHTML="<font color=red>Please Enter 10 Digits";
+return false;
+      }
+      if(x!=y)
+      {
+        document.getElementById("bb").innerHTML="<font color=red>U entered Wrong Password";
+        return false;
+
+      }
+       if(isNaN(z))
+      {
+document.getElementById("cc").innerHTML="<font color=red>Please Enter Only Digits";
+return false;
+      }
+      if(a.length!=12)
+      {
+document.getElementById("dd").innerHTML="<font color=red>Please Enter 12 Digits";
+return false;
+      }
+     
+return true;
+      
+    }
+  </script>
+</head>
+<body>
+	 <div class="container">
+  <h1 style="text-align: center;font-family:Constantia ;font-size: 30;color: red"><b>Tech Registration</b></h1>
+  <form name="f1" onsubmit="return validate()" method="post" action="tech_register.php">
+  	<div class="row">
+  		<div class="col-lg-12">
+  			<label for="fullname" style="font-size: 20px">Full Name:</label>
+  		</div>
+  		
+  	</div>
+  	<div class="row"> 
+  		<div class="col-lg-4">
+  			<div class="form-group">
+  				<label for="frstname" style="font-size: 20px">FirstName:</label>
+  				<input type="text" class="form-control"  placeholder="Enter First Name" name="txtfrstname" required="">
+  			</div>
+  		</div>
+  		<div class="col-lg-4">
+  			<div class="form-group">
+  				<label for="midname" style="font-size: 20px">Middle Name:</label>
+  				<input type="text" class="form-control"  placeholder="Enter Middle Name" name="txtmidname" required="">
+  			</div>
+  		</div>
+  		<div class="col-lg-4">
+  			<div class="form-group">
+  				<label for="lstname" style="font-size: 20px">Last Name:</label>
+  				<input type="text" class="form-control"  placeholder="Enter Last Name" name="txtlstname" required="">
+  			</div>
+  		</div>	
+  	</div>
+  	<div class="row"> 
+  		<div class="col-lg-4">
+  			<div class="form-group">
+  				<label for="username" style="font-size: 20px">Username:</label>
+  				<input type="email" class="form-control"  placeholder="Enter Username" name="txtuser" required="">
+  			</div>
+  		</div>
+  		<div class="col-lg-4">
+  			<div class="form-group">
+  				<label for="pwd" style="font-size: 20px">Password:</label>
+  				<input type="password" class="form-control"  placeholder="Enter Password" name="txtpwd" required=""><p id="aa"></p>
+  			</div>
+  		</div>
+  		<div class="col-lg-4">
+  			<div class="form-group">
+  				<label for="cnfrmpwd" style="font-size: 20px">Confirm Password:</label>
+  				<input type="password" class="form-control"  placeholder="Enter Confirm Password" name="txtcnfrmpwd" required=""><p id="bb"></p>
+  			</div>
+  		</div>	
+  	</div>
+  		<label for="address" style="font-size: 20px">Address:</label><br>
+      <div class="row">
+        <div class="col-lg-4">
+      <textarea class="form-control"  placeholder="Enter address" name="txtaddress" required=""></textarea><p></p><p></p></div>
+  </div>
+  <div class="row"> 
+  		<div class="col-lg-4">
+  			<div class="form-group">
+  				<label for="mobno" style="font-size: 20px">MobileNumber:</label>
+  				<input type="text" class="form-control"  placeholder="Enter Mobile Number" name="txtmobno" required=""><p id="cc"></p>
+  			</div>
+  		</div>
+  		<div class="col-lg-4">
+  			<div class="form-group">
+  				<label for="aadharno" style="font-size: 20px">Adhaar Number:</label>
+  				<input type="text" class="form-control"  placeholder="Enter Adhaar Number" name="txtaadharno" required=""><p id="dd"></p>
+  			</div>
+  		</div>
+  		<div class="col-lg-4">
+  			<div class="form-group">
+  				<label for="lstname" style="font-size: 20px">Email:</label>
+  				<input type="email" class="form-control"  placeholder="Enter Email ID" name="txtemail" required="">
+  			</div>
+  		</div>	
+  	</div>	
+    <br>
+    <div align="center">  
+<input type="submit" class="btn btn-primary"></div>
+  </form>
+  </div>
+
+</body>
+</html>

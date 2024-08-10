@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+  
+</head>
+<body>
+	 <div class="container">
+  <h1 style="text-align: center;font-family:Constantia ;color: red;font-size:35px;"><b>HR Round Scheduling</b></h1>
+  <form name="f1" method="post" action="hr_register.php" onsubmit="return validate()">
+  	<div class="row"> 
+  		<div class="col-lg-4">
+  			<div class="form-group">
+  				<label for="frstname" style="font-size: 20px">Candidate ID:</label>
+  				<input type="text" class="form-control"   name="txtcandidateid" required="">
+  			</div>
+  		</div>
+  		<div class="col-lg-4">
+  			<div class="form-group">
+  				<label for="midname" style="font-size: 20px">Full Name:</label>
+  				<input type="text" class="form-control"   name="txtfullname" required="">
+  			</div>
+  		</div>
+  		<div class="col-lg-4">
+  			<div class="form-group">
+  				<label for="lstname" style="font-size: 20px">Last Name:</label>
+  				<input type="text" class="form-control"  placeholder="Enter Last Name" name="txtlstname" required="">
+  			</div>
+  		</div>	
+  	</div>
+  	<div class="row"> 
+  		<div class="col-lg-4">
+  			<div class="form-group">
+  				<label for="username" style="font-size: 20px">Username:</label>
+  				<input type="email" class="form-control"  placeholder="Enter Username" name="txtuser" required="">
+  			</div>
+  		</div>
+  		<div class="col-lg-4">
+  			<div class="form-group">
+  				<label for="pwd" style="font-size: 20px">Password:</label>
+  				<input type="password" class="form-control"  placeholder="Enter Password" name="txtpwd" required=""><p id="aa"></p>
+  			</div>
+  		</div>
+  		<div class="col-lg-4">
+  			<div class="form-group">
+  				<label for="cnfrmpwd" style="font-size: 20px">Confirm Password:</label>
+  				<input type="password" class="form-control"  placeholder="Enter Confirm Password" name="txtcnfrmpwd" required=""><p id="bb"></p>
+  			</div>
+  		</div>	
+  	</div>
+  		<label for="address" style="font-size: 20px">Address:</label><br>
+      <div class="row">
+        <div class="col-lg-4">
+      <textarea class="form-control"  placeholder="Enter address" name="txtaddress" required=""></textarea><p></p><p></p></div>
+  </div>
+  <div class="row"> 
+  		<div class="col-lg-4">
+  			<div class="form-group">
+  				<label for="mobno" style="font-size: 20px">MobileNumber:</label>
+  				<input type="text" class="form-control"  placeholder="Enter Mobile Number" name="txtmobno" required=""><p id="cc"></p>
+  			</div>
+  		</div>
+  		<div class="col-lg-4">
+  			<div class="form-group">
+  				<label for="aadharno" style="font-size: 20px">Adhaar Number</label>
+  				<input type="text" class="form-control"  placeholder="Enter Adhaar Number" name="txtaadharno" required="">
+  			</div>
+  		</div>
+  		<div class="col-lg-4">
+  			<div class="form-group">
+  				<label for="lstname" style="font-size: 20px">Email:</label>
+  				<input type="email" class="form-control"  placeholder="Enter Email ID" name="txtemail" required="">
+  			</div>
+  		</div>	
+  	</div>	
+<input type="submit" class="btn btn-primary">
+  </form>
+  </div>
+
+</body>
+</html>
